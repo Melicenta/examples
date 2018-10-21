@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  h1= title
+  p.title Welcome to #{title}
+
+  span.form-field-input
+    p.inline-text.
+      Multi select control
+    div.select.multi
+      ul
+        each val, index in ['one', 'two', 'three','four','five']
+          li.switch-option(data-code=val)
+            a.button-sort= index + ': ' + val
+  span.form-field-input
+    p.inline-text.
+       Mutual select control
+    div.select.mutual
+      ul
+        each val, index in ['one', 'two', 'three','four','five']
+          li.switch-option(data-code=val)
+            a.button-sort= index + ': ' + val
+
+  span.form-field-input
+    p.inline-text.
+      Single select control
+    div.select.single.purple
+      ul
+        each val, index in ['six']
+          li.switch-option(data-code=val)
+            a.button-sort= val
+    div.select.single.gold
+      ul
+        each val, index in ['seven']
+          li.switch-option(data-code=val)
+            a.button-sort= val
+    div.select.single.cyan
+      ul
+        each val, index in ['eight']
+          li.switch-option(data-code=val)
+            a.button-sort= val
+
+

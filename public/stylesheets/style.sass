@@ -1,0 +1,45 @@
+.select
+  display: inline-table
+  padding: 0
+  margin: 0 6px
+  ul
+    list-style-type: none
+    display: inline-table
+    padding: 0
+    margin: 0
+    box-shadow: 0 0 2px #B5ADBB
+    border-radius: 2px
+    li
+      padding: 0
+      margin: 0
+      display: table-cell
+      color: #A3A3A3
+      text-align: center
+      a
+        display: block
+        padding: 5px 7px
+        cursor: pointer
+        font-size: 12px
+        &:before
+          padding-right: 3px
+          vertical-align: middle
+        &:hover
+          color: #646464
+          box-shadow: inset 0 0 1px #646464
+          transition: color 0.3s linear
+      &.checked a
+        &:hover
+          color: #EBECED
+          opacity: 0.8
+        background-color: rgb(78, 99, 92)
+        box-shadow: 0 0 3px #41524C
+        color: #EBECED
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.8)
+  &.single li.checked a:before
+    content: '\2728'
+    display: inline-block
+    padding-right: 5px
+  &.purple li.checked a
+    background-color: rgba(120, 114, 205, 0.88)
+  &.cyan li.checked a
+    background-color: rgba(101, 162, 188, 0.99)
